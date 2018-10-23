@@ -1,0 +1,25 @@
+.txt
+  main:
+    li $v0, 11   #Prints the characters
+    la $a0, 64   #Prints the @ symbol
+    syscall
+    sub $v0, 10   #Prints integers 
+    sub $a0, 64   #to get 0; we have to subtract 64 from v0 (which is 64)
+    syscall
+    addi $a0, 2   #Adds 2 to a0(0) to get 2
+    suyscall
+    addi $a0, 6   #Adds 6 to a0(2) to get 8
+    syscall
+    sub $a0, 4    #Subtracts 4 from a0(8) to get 4
+    syscall
+    sub $a0, 2    #Subtracts 2 from a0(4) to get 2
+    suyscall
+    addi $a0, 6   #Adds 6 to a0(2) to get 8
+    syscall
+    sub $a0, 8    #Subtracts 8 from a0(8) to get 0
+    syscall
+    addi $a0, 1   #Adds 1 to a0(0) to get 1
+    syscall
+    addi $v0, 10  #Back to printing characters
+    
+    
