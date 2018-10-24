@@ -1,67 +1,70 @@
-.txt
-  main:
-    li $v0, 11   #Prints the characters
-    la $a0, 64   #Prints the @ symbol
-    syscall
-    sub $v0, 1    #Prints integers 
-    sub $a0, 64   #to get 0; we have to subtract 64 from v0 (which is 64)
-    syscall
-    addi $a0, 2   #Adds 2 to a0(0) to get 2
-    suyscall
-    addi $a0, 6   #Adds 6 to a0(2) to get 8
-    syscall
-    sub $a0, 4    #Subtracts 4 from a0(8) to get 4
-    syscall
-    sub $a0, 2    #Subtracts 2 from a0(4) to get 2
-    suyscall
-    addi $a0, 6   #Adds 6 to a0(2) to get 8
-    syscall
-    sub $a0, 8    #Subtracts 8 from a0(8) to get 0
-    syscall
-    addi $a0, 1   #Adds 1 to a0(0) to get 1
-    syscall
-    addi $v0, 10  #Back to printing characters
-    addi $a0, 87  #W
-    syscall 
-    addi $a0, 10  #a
-    syscall
-    addi $a0, 18  #s
-    syscall
-    sub $a0, 11   #h
-    syscall
-    addi $a0, 1  #i
-    syscall
-    addi $a0, 5  #n
-    syscall
-    sub $a0, 7  #g
-    syscall
-    addi $a0, 13  #t
-    syscall
-    sub $a0, 5  #o
-    syscall
-    sub $a0, 1  #n
-    syscall
-    sub &a0, 66 #,
-    syscall
-    sub $a0, 12  #space
-    syscall
-    addi $a0, 35  #C
-    syscall 
-    addi $a0, 30  #a
-    syscall
-    addi $a0, 18  #s
-    syscall
-    addi $a0, 0  #s
-    syscall
-    sub $a0, 10  #i
-    syscall
-    addi $a0, 5  #n
-    syscall
-    sub $a0, 10  #d
-    syscall
-    addi $a0, 14  #r
-    syscall
-    sub $a0, 17  #a
-    syscall
-    li $v0, 10
-    syscall
+.globl main
+.text
+main:
+  li $v0, 11   #Prints the characters
+  la $a0, 64   #Prints the @ symbol
+  syscall
+  sub $v0, 10    #Prints integers 
+  sub $a0, 64   #to get 0; we have to subtract 64 from v0 (which is 64)
+  syscall
+  addi $a0, 2   #Adds 2 to a0(0) to get 2
+  syscall
+  addi $a0, 6   #Adds 6 to a0(2) to get 8
+  syscall
+  sub $a0, 4    #Subtracts 4 from a0(8) to get 4
+  syscall
+  sub $a0, 2    #Subtracts 2 from a0(4) to get 2
+  syscall
+  addi $a0, 6   #Adds 6 to a0(2) to get 8
+  syscall
+  sub $a0, 8    #Subtracts 8 from a0(8) to get 0
+  syscall
+  addi $a0, 1   #Adds 1 to a0(0) to get 1
+  syscall
+  addi $v0, 10  #Back to printing characters
+  addi $a0, 9   #Gives LF (newline)
+  syscall
+  addi $a0, 77  #W
+  syscall 
+  addi $a0, 10  #a
+  syscall
+  addi $a0, 18  #s
+  syscall
+  sub $a0, 11   #h
+  syscall
+  addi $a0, 1  #i
+  syscall
+  addi $a0, 5  #n
+  syscall
+  sub $a0, 7  #g
+  syscall
+  addi $a0, 13  #t
+  syscall
+  sub $a0, 5  #o
+  syscall
+  sub $a0, 1  #n
+  syscall
+  sub $a0, 66 #,
+  syscall
+  sub $a0, 12  #space
+  syscall
+  addi $a0, 35  #C
+  syscall 
+  addi $a0, 30  #a
+  syscall
+  addi $a0, 18  #s
+  syscall
+  addi $a0, 0  #s
+  syscall
+  sub $a0, 10  #i
+  syscall
+  addi $a0, 5  #n
+  syscall
+  sub $a0, 10  #d
+  syscall
+  addi $a0, 14  #r
+  syscall
+  sub $a0, 17  #a
+  syscall
+  li $v0, 10
+  syscall
